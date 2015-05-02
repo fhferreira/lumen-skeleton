@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "analyze": false,
+  "devDependencies": {
+    "gulp": "~3.8",
+    "laravel-elixir": "*"
+  }
+}
