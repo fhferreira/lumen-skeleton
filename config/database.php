@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DATABASE_CONNECTION'),
+    'default' => env('DB_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,8 +53,32 @@ return [
 
         'sqlite' => [
             'driver'   => 'sqlite',
-            'database' => storage_path(env('DATABASE_NAME')),
+            'database' => storage_path(env('DB_DATABASE')),
             'prefix'   => '',
+        ],
+
+        'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST'),
+            'database'  => env('DB_DATABASE'),
+            'username'  => env('DB_USERNAME'),
+            'password'  => env('DB_PASSWORD'),
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix'    => env('DB_PREFIX'),
+            'timezone'  => env('DB_TIMEZONE'),
+            'strict'    => false,
+        ],
+
+        'pgsql' => [
+            'driver'   => 'pgsql',
+            'host'     => env('DB_HOST'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+            'charset'  => 'utf8',
+            'prefix'   => env('DB_PREFIX'),
+            'schema'   => 'public',
         ],
 
     ],

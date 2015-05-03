@@ -12,11 +12,10 @@
   ],
   "require": {
     "laravel/lumen-framework": "5.0.*",
-    "illuminate/redis": "5.0.*",
     "illuminate/mail": "5.0.*",
+    "illuminate/redis": "5.0.*",
     "predis/predis": "~1.0",
     "pda/pheanstalk": "~3.0",
-    "guzzlehttp/guzzle": "~5.2",
     "vlucas/phpdotenv": "~1.1"
   },
   "require-dev": {
@@ -34,6 +33,14 @@
   "autoload-dev": {
     "classmap": [
       "tests/"
+    ]
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php artisan cache:clear"
+    ],
+    "post-update-cmd": [
+      "php artisan cache:clear"
     ]
   },
   "config": {

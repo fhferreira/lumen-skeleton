@@ -1,5 +1,3 @@
 # Acme
 
----
-
 Lumen app skeleton
